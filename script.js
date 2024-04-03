@@ -34,6 +34,7 @@ function draw() {
     if(mouseIsPressed){
       // spin object 1 by calling its spin() method
       // you will have to create that method inside the myClass constructor ...
+   obj1.spin();
     } else {
       obj1.reset(); // the reset function is done for you
     }
@@ -64,6 +65,10 @@ function myClass(tempX, tempY){
   Create a spin method here. Look at the reset() method below and the spin() method from the Sakai example for this week.
   the function assigned to this.spin should take a number argument; that number should be _added_ to the value of this.angle. The reset() method sets this.angle back to 0, and this.scale back to 1
   */
+  this.spin = function (){
+    this.angle += .01; 
+    this.scale *= .99;
+  }
   
   this.reset = function(){
       this.angle = 0;
